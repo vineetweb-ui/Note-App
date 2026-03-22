@@ -9,7 +9,10 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://rococo-mooncake-abba08.netlify.app',
+    credentials: true
+}));
 app.use(express.json());
 
 // Routes
