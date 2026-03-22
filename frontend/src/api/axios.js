@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_URL = 'https://note-app-dxck.onrender.com';
 
 const instance = axios.create({
-    baseURL: API_URL || "https://note-app-dxck.onrender.com"
+    baseURL: API_URL ,
 });
 
 // Add a request interceptor to include the JWT token
