@@ -9,12 +9,12 @@ const app = express();
 connectDB();
 
 // Middleware
+import cors from 'cors';
+
 app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        'https://rococo-mooncake-abba08.netlify.app/login'
-    ],
-    credentials: true
+  origin: 'https://rococo-mooncake-abba08.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
 app.use(express.json());
 
