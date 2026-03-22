@@ -12,13 +12,14 @@ connectDB();
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        'https://rococo-mooncake-abba08.netlify.app'
+        'https://rococo-mooncake-abba08.netlify.app/login'
     ],
     credentials: true
 }));
 app.use(express.json());
 
 // Routes
+
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/notes', require('./routes/noteRoutes'));
 
